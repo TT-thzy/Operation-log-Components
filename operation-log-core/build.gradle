@@ -1,0 +1,13 @@
+dependencies {
+    api project(':operation-log-common')
+
+    api('org.springframework.boot:spring-boot-starter-aop')
+    api('org.springframework.boot:spring-boot-starter-validation')
+    api('org.springframework.boot:spring-boot-starter-freemarker')
+    api('org.springframework.boot:spring-boot-starter-json')
+    api('org.springframework.boot:spring-boot-starter-log4j2')
+
+    api 'commons-io:commons-io'
+    api 'com.google.guava:guava'
+    api "javax.servlet:javax.servlet-api:3.1.0"
+}
