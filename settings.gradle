@@ -1,0 +1,6 @@
+rootProject.name = 'Operation-log-Components'
+include 'operation-log-common'
+include 'operation-log-storage-support'
+include 'operation-log-producer'
+include 'operation-log-consumer'
+
