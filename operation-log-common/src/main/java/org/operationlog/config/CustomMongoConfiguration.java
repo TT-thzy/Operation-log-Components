@@ -1,10 +1,10 @@
 package org.operationlog.config;
 
-import com.idempotent.mongo.converter.BigDecimalToDecimal128Converter;
-import com.idempotent.mongo.converter.Decimal128ToBigDecimalConverter;
-import com.idempotent.mongo.converter.DocumentToMapConverter;
-import com.idempotent.mongo.converter.OptionalConverter;
-import com.idempotent.mongo.driver.HybridMongoTemplate;
+import org.operationlog.mongo.converter.BigDecimalToDecimal128Converter;
+import org.operationlog.mongo.converter.Decimal128ToBigDecimalConverter;
+import org.operationlog.mongo.converter.DocumentToMapConverter;
+import org.operationlog.mongo.converter.OptionalConverter;
+import org.operationlog.mongo.driver.HybridMongoTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
