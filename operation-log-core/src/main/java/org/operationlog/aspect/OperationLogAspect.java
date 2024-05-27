@@ -1,22 +1,17 @@
-package com.operationlog.aspect;
+package org.operationlog.aspect;
 
 import com.google.common.collect.ImmutableList;
-import com.operationlog.OperationLog;
-import com.operationlog.OperationLogModule;
-import com.operationlog.OperationLogTag;
-import com.operationlog.domain.MethodExecuteResult;
-import com.operationlog.domain.OperationLogInfo;
-import com.operationlog.service.OperationLogRecorder;
+import org.operationlog.OperationLog;
+import org.operationlog.OperationLogModule;
+import org.operationlog.domain.MethodExecuteResult;
+import org.operationlog.service.OperationLogRecorder;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.operationlog.aware.UserGetterAware;
-import org.operationlog.utils.FreemarkerUtils;
-import org.operationlog.utils.JsonUtils;
 import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.codec.multipart.Part;
 import org.springframework.validation.BindingResult;
@@ -48,10 +43,6 @@ import java.util.stream.IntStream;
 public class OperationLogAspect implements UserGetterAware {
 
     private static List<Class<?>> ignoreType;
-
-    // 操作人hook
-    private Supplier<Optional<Long>> userGetter = Optional::empty;
-
     static {
         ignoreType = ImmutableList.of(ServletRequest.class, HttpServletRequest.class, MultipartRequest.class,
                 MultipartHttpServletRequest.class, ServletResponse.class, HttpServletResponse.class,
@@ -60,6 +51,9 @@ public class OperationLogAspect implements UserGetterAware {
                 BindingResult.class, SessionStatus.class, UriComponentsBuilder.class, HttpEntity.class
         );
     }
+
+    // 操作人hook
+    private Supplier<Optional<Long>> userGetter = Optional::empty;
 
     // 应用名称
     private String applicationName;
@@ -92,7 +86,7 @@ public class OperationLogAspect implements UserGetterAware {
 
     }
 
-    @Around(value = "@annotation(com.operationlog.OperationLog)")
+    @Around(value = "@annotation(org.operationlog.OperationLog)")
     public Object invokeMethod(ProceedingJoinPoint joinPoint) throws Throwable {
         // get args
         Object[] arguments = joinPoint.getArgs();

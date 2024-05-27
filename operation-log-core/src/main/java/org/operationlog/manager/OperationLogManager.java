@@ -1,6 +1,6 @@
-package com.operationlog.manager;
+package org.operationlog.manager;
 
-import com.operationlog.aspect.OperationLogAspect;
+import org.operationlog.aspect.OperationLogAspect;
 import org.operationlog.context.SpringApplicationContext;
 import org.operationlog.exception.BusinessException;
 import org.springframework.beans.factory.annotation.Autowired;

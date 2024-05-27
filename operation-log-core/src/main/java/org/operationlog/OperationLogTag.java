@@ -1,4 +1,4 @@
-package com.operationlog;
+package org.operationlog;
 
 public @interface OperationLogTag {
     String key();

@@ -1,9 +1,9 @@
-package com.operationlog.service;
+package org.operationlog.service;
 
-import com.operationlog.OperationLog;
-import com.operationlog.OperationLogTag;
-import com.operationlog.domain.MethodExecuteResult;
-import com.operationlog.domain.OperationLogInfo;
+import org.operationlog.OperationLog;
+import org.operationlog.OperationLogTag;
+import org.operationlog.domain.MethodExecuteResult;
+import org.operationlog.domain.OperationLogInfo;
 import org.operationlog.enumeration.CodeVariableType;
 import org.apache.commons.lang3.StringUtils;
 import org.operationlog.utils.FreemarkerUtils;

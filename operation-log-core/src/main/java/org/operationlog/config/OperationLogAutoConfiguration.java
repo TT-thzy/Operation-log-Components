@@ -1,7 +1,7 @@
-package com.operationlog.config;
+package org.operationlog.config;
 
-import com.operationlog.aspect.OperationLogAspect;
-import com.operationlog.service.OperationLogRecorder;
+import org.operationlog.aspect.OperationLogAspect;
+import org.operationlog.service.OperationLogRecorder;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

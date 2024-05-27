@@ -1,4 +1,4 @@
-package com.operationlog.config;
+package org.operationlog.config;
 
 import lombok.Getter;
 import lombok.Setter;

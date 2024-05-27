@@ -1,4 +1,4 @@
-package com.operationlog.domain;
+package org.operationlog.domain;
 
 import lombok.Data;
 

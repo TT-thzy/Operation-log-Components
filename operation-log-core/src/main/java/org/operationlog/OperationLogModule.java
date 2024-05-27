@@ -1,4 +1,4 @@
-package com.operationlog;
+package org.operationlog;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

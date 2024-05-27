@@ -26,7 +26,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableAspectJAutoProxy(exposeProxy = true)
 @ComponentScan(
-        basePackages = {"com.operationlog"}
+        basePackages = {"org.operationlog"}
 )
 @SpringBootApplication(exclude = {GsonAutoConfiguration.class, FlywayAutoConfiguration.class})
 @PropertySource("classpath:application.yml")
@@ -34,5 +34,6 @@ public class OperationLogProducerRestApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OperationLogProducerRestApplication.class, args);
+        System.out.println("debug");
     }
 }

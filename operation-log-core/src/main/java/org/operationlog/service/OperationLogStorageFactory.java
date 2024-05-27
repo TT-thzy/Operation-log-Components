@@ -1,7 +1,7 @@
-package com.operationlog.service;
+package org.operationlog.service;
 
-import com.operationlog.service.storage.OperateLogConsoleService;
-import com.operationlog.service.storage.OperateLogStorageService;
+import org.operationlog.service.storage.OperateLogConsoleService;
+import org.operationlog.service.storage.OperateLogStorageService;
 import org.operationlog.constant.OperationLogStorageType;
 
 import java.util.Map;

@@ -1,3 +1,15 @@
 dependencies {
     api project(':operation-log-core')
+
+    /* swagger */
+    api 'io.springfox:springfox-swagger2'
+    api 'io.springfox:springfox-swagger-ui'
+    //JSR-303 support
+    api 'io.springfox:springfox-bean-validators'
+
+}
+
+configurations.all {
+    exclude group: 'commons-logging', module: 'commons-logging'
+    exclude module: 'spring-boot-starter-logging'
 }

@@ -1,6 +1,6 @@
-package com.operationlog.service.storage;
+package org.operationlog.service.storage;
 
-import com.operationlog.domain.OperationLogInfo;
+import org.operationlog.domain.OperationLogInfo;
 
 /**
  * @description:

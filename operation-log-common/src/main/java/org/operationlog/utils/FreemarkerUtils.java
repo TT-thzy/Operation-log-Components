@@ -28,7 +28,7 @@ public class FreemarkerUtils {
         standardEvaluationContext.setVariable("params", params);
         standardEvaluationContext.setVariable("result", result);
         standardEvaluationContext.setVariable("entityName", StringUtils.isNotEmpty(module) ? module : "{#entityName}");
-        standardEvaluationContext.setVariable("errorMsg", result);
+        standardEvaluationContext.setVariable("errorMsg", errorMsg);
 
 
         ExpressionParser parser = new SpelExpressionParser();

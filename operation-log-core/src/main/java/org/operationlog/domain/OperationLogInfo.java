@@ -1,6 +1,6 @@
-package com.operationlog.domain;
+package org.operationlog.domain;
 
-import com.operationlog.OperationLog;
+import org.operationlog.OperationLog;
 import lombok.ToString;
 import org.operationlog.enumeration.CodeVariableType;
 import lombok.Data;

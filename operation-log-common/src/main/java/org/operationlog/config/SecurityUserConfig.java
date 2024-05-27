@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2024/5/24
  **/
 @Configuration
-public class SecurityConfig {
+public class SecurityUserConfig {
 
     @Configuration
     @ConditionalOnClass(UserGetterBeanPostProcessor.class)
