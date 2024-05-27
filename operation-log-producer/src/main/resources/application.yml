@@ -27,7 +27,7 @@ management:
           - threaddump
 operation-log:
   applicationName: testApplication
-  storageType: CONSOLE
+  storageType: LOCAL_MONGODB
 server:
   servlet:
     context-path: /operationlog-producer-rest

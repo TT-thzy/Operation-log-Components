@@ -1,8 +1,9 @@
 package org.operationlog.service;
 
 import org.operationlog.constant.OperationLogPipelineOperationsType;
-import org.operationlog.service.storage.OperateLogConsoleOperationService;
-import org.operationlog.service.storage.OperateLogPipelineOperationsService;
+import org.operationlog.service.pipeline.OperateLogConsoleOperationService;
+import org.operationlog.service.pipeline.OperateLogLocalMongodbStorageOperationService;
+import org.operationlog.service.pipeline.OperateLogPipelineOperationsService;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -18,6 +19,7 @@ public class OperationLogPipelineOperationsFactory {
 
     static {
         factory.put(OperationLogPipelineOperationsType.CONSOLE, new OperateLogConsoleOperationService());
+        factory.put(OperationLogPipelineOperationsType.LOCAL_MONGODB, new OperateLogLocalMongodbStorageOperationService());
     }
 
     public OperateLogPipelineOperationsService getStorageHandle(String storageType) {

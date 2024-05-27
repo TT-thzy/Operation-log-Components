@@ -8,7 +8,7 @@ package org.operationlog.constant;
 public interface OperationLogPipelineOperationsType {
 
     //本地持久化
-    String LOCAL = "LOCAL";
+    String LOCAL_MONGODB = "LOCAL_MONGODB";
 
     //http传输至日志服务
     String HTTP = "HTTP";

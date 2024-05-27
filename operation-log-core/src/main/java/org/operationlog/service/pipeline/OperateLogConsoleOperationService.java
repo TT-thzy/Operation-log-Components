@@ -1,4 +1,4 @@
-package org.operationlog.service.storage;
+package org.operationlog.service.pipeline;
 
 import org.operationlog.domain.OperationLogInfo;
 
