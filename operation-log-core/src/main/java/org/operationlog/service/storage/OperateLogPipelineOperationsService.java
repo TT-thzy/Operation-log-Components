@@ -7,8 +7,8 @@ import org.operationlog.domain.OperationLogInfo;
  * @author: TT-Berg
  * @date: 2024/5/24
  **/
-public interface OperateLogStorageService {
+public interface OperateLogPipelineOperationsService {
 
-    void storage(OperationLogInfo operationLogInfo);
+    void pipelineOperate(OperationLogInfo operationLogInfo);
 
 }

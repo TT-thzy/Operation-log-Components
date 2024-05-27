@@ -5,7 +5,7 @@ package org.operationlog.constant;
  * @author: TT-Berg
  * @date: 2024/5/24
  **/
-public interface OperationLogStorageType {
+public interface OperationLogPipelineOperationsType {
 
     //本地持久化
     String LOCAL = "LOCAL";

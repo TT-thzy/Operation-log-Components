@@ -24,10 +24,10 @@ import java.util.Objects;
  **/
 public class OperationLogRecorder {
 
-    private OperationLogStorageFactory factory;
+    private OperationLogPipelineOperationsFactory factory;
 
     {
-        factory = new OperationLogStorageFactory();
+        factory = new OperationLogPipelineOperationsFactory();
     }
 
     public void recordOperationLog(MethodExecuteResult methodExecuteResult, OperationLog operationLog, String module,
@@ -47,7 +47,7 @@ public class OperationLogRecorder {
                 codeVariable, methodExecuteResult.isSuccess());
 
         // 存储操作日志
-        factory.getStorageHandle(storageType).storage(operationLogInfo);
+        factory.getStorageHandle(storageType).pipelineOperate(operationLogInfo);
     }
 
     private String getOperationMessage(MethodExecuteResult methodExecuteResult, Map<String, Object> params,

@@ -2,6 +2,7 @@ package org.operationlog.config;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.operationlog.constant.OperationLogPipelineOperationsType;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("operation-log")
@@ -9,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Setter
 public class OperationLogProperties {
 
-    private String applicationName;
+    private String applicationName = "Default-Application";
 
-    private String storageType;
+    private String storageType = OperationLogPipelineOperationsType.CONSOLE;
 }

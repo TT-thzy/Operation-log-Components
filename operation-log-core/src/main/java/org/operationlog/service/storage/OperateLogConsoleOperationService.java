@@ -7,10 +7,10 @@ import org.operationlog.domain.OperationLogInfo;
  * @author: TT-Berg
  * @date: 2024/5/24
  **/
-public class OperateLogConsoleService implements OperateLogStorageService {
+public class OperateLogConsoleOperationService implements OperateLogPipelineOperationsService {
 
     @Override
-    public void storage(OperationLogInfo operationLogInfo) {
+    public void pipelineOperate(OperationLogInfo operationLogInfo) {
         System.out.println(operationLogInfo.toString());
     }
 
