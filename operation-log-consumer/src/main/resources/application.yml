@@ -1,0 +1,70 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  output:
+    ansi:
+      enabled: ALWAYS   #控制台彩色打印输出
+  mvc:
+    throw-exception-if-no-handler-found: true
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/db
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+  cloud:
+    stream:
+      binder:
+        type: kafka
+        environment:
+          spring:
+            cloud:
+              stream:
+                kafka:
+                  binder: #KafkaBinderConfigurationProperties
+                    brokers:
+                      - 127.0.0.1:9092
+                    kafkaProperties: #KafkaProperties
+                      clientId: operation-log-local-test
+                      consumer: #KafkaProperties$Consumer
+                        maxPollRecords: 1
+                        groupId: operation-log-local-test
+                        enableAutoCommit: false
+                      listener:
+                        ackMode: MANUAL_IMMEDIATE
+                        concurrency: 1
+                    required-acks: all
+                    producer-properties:
+                      max.in.flight.requests.per.connection: 1
+      bindings:
+        operationLogConsumer-in-0:
+          destination: operation-logs
+      kafka:
+        default:
+          consumer:
+            auto-commit-offset: false
+            ack-mode: MANUAL_IMMEDIATE
+            configuration:
+              group.id: operation-logs-dev
+      function:
+        definition: operationLogConsumer
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include:
+          - beans
+          - health
+          - httptrace
+          - threaddump
+operation-log:
+  applicationName: testApplication
+  storageType: LOG4J_KAFKA_APPENDER
+server:
+  servlet:
+    context-path: /operationlog-consumer-rest
+  port: 8081
