@@ -27,7 +27,7 @@ management:
           - threaddump
 operation-log:
   applicationName: testApplication
-  storageType: LOCAL_MONGODB
+  storageType: LOG4J_KAFKA_APPENDER
 server:
   servlet:
     context-path: /operationlog-producer-rest

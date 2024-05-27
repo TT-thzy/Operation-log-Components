@@ -1,9 +1,9 @@
 package org.operationlog.domain;
 
-import org.operationlog.OperationLog;
-import lombok.ToString;
-import org.operationlog.enumeration.CodeVariableType;
 import lombok.Data;
+import lombok.ToString;
+import org.operationlog.OperationLog;
+import org.operationlog.enumeration.CodeVariableType;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,12 +14,6 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 操作日志信息
- *
- * @author Michael
- * @date 2018/11/05
- */
 @Data
 @ToString
 public class OperationLogInfo {
